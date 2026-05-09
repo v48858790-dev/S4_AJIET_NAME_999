@@ -1,0 +1,46 @@
+public class Main {
+    public static void main(String[] args) {
+
+        // input values
+        int n = 20; // Total monkeys
+        int k = 2;  // Bananas eaten by one monkey
+        int j = 3;  // Peanuts eaten by one monkey
+        int m = 12; // Total bananas
+        int p = 12; // Total peanuts
+
+        //invalid input check
+        if (n < 0 || k <= 0 || j <= 0 || m < 0 || p < 0) {
+            System.out.println("INVALID INPUT");
+            return;
+        }
+
+        // monkeys eating bananas
+        int monkeysBanana = m / k;
+
+        // extra monkey if bananas remain
+        if (m % k != 0) {
+            monkeysBanana++;
+        }
+
+        // monkeys eating peanuts
+        int monkeysPeanut = p / j;
+
+        // Extra monkey if peanuts remain
+        if (p % j != 0) {
+            monkeysPeanut++;
+        }
+
+        // Total monkeys came down
+        int monkeysDown = monkeysBanana + monkeysPeanut;
+
+        // Monkeys left on tree
+        int monkeysLeft = n - monkeysDown;
+
+        // Avoid negative answer
+        if (monkeysLeft < 0) {
+            monkeysLeft = 0;
+        }
+
+        System.out.println("Number of Monkeys left on the tree: " + monkeysLeft);
+    }
+}
