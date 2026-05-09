@@ -1,0 +1,25 @@
+public class Main {
+    
+    public static void main(String[] args) {
+        int candies=10;
+        int n=10;
+        int k=5;
+        int order=3;
+        if (order>candies){
+            System.out.println("dont have that much candy.");
+            
+        }
+        
+       else{
+           candies=candies-order;
+           System.out.println("number of candies sold:"+order);
+       }
+       
+       if(candies<=k){
+            candies=n;
+        }
+        
+System.out.println("Number of Candies available: " + candies);
+}
+}
+
