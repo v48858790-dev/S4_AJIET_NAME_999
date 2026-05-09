@@ -1,0 +1,11 @@
+class Main {
+    public static void main(String[] args) {
+        String y="Hello World Java";
+        System.out.println(y);
+        System.out.println(y.length());
+        System.out.println("converting string to uppercase");
+        System.out.println(y.toUpperCase());
+        System.out.println("converting string to lowercase");
+        System.out.println(y.toLowerCase());
+    }
+}
